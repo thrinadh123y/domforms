@@ -74,8 +74,25 @@
                    td.innerHTML= users[i][a]
                    tr.appendChild(td)
                }
+               var td2=document.createElement('td')
+               var button=document.createElement('button')
+               button.setAttribute('class','btn btn-warning')
+               button.setAttribute('onclick','edituser('+i+')')
+               button.innerHTML="Edit"
+               td2.appendChild(button)
+             
+               tr.appendChild(td2)
+
                document.getElementById('myTable').appendChild(tr)
            }
+       }
+       function edituser(i){
+         displayformvalues(users[i])
+       }
+       function displayformvalues(obj){
+     for( a in obj){
+         document.getElementById(a).value=obj[a]
+     }
        }
    </script>
 </body>
