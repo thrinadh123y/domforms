@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+               
+                </tbody>
+              </table>
+    <script>
+        var users = [
+    {
+        "fname": "Curtis",
+        "lname": "Cowen",
+        "tel": "(315)332-9143",
+        "address": "7167 Id Dr",
+        "city": "Waldorf",
+        "state": "MD",
+        "zip": 44492
+    },
+    {
+        "fname": "Shivkumar",
+        "lname": "Mcdonough",
+        "tel": "(922)945-6781",
+        "address": "238 Fringilla Rd",
+        "city": "Winchester",
+        "state": "ME",
+        "zip": 96956
+    },
+    {
+        "fname": "Paula",
+        "lname": "Parham",
+        "tel": "(174)787-9672",
+        "address": "7495 Turpis Rd",
+        "city": "San Antonio",
+        "state": "ME",
+        "zip": 62581
+    },
+    {
+        "fname": "Braulio",
+        "lname": "Hesters",
+        "tel": "(455)614-1500",
+        "address": "1218 Nullam Dr",
+        "city": "Somerset",
+        "state": "ND",
+        "zip": 64640
+    },
+    {
+        "fname": "Ning",
+        "lname": "Ward",
+        "tel": "(526)075-0889",
+        "address": "236 Suspendisse Rd",
+        "city": "Boston",
+        "state": "ID",
+        "zip": 55788
+    }
+]
+for(i=0;i<users.length;i++){
+    var TR = document.createElement("tr");
+    console.log(users[i])
+    for( a in users[i]){
+        var td = document.createElement("td")
+        td.innerHTML=users[i][a]
+        TR.appendChild(td)
+    }
+    document.getElementById("myTable").appendChild(TR)
+}
+    </script>
+</body>
+</html>
